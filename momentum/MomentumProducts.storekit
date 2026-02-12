@@ -1,0 +1,128 @@
+{
+  "identifier" : "F3D2A1B0-1234-5678-9ABC-DEF012345678",
+  "type" : "com.apple.storekit.configuration",
+  "version" : 1,
+  "products" : [
+    {
+      "displayPrice" : "7.99",
+      "familyShareable" : false,
+      "internalID" : "1001",
+      "localizations" : [
+        {
+          "description" : "Unlimited goals, relationships & more",
+          "displayName" : "momentum Plus Monthly",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "io.momentum.goaltracker.plus.monthly",
+      "recurringSubscriptionPeriod" : "P1M",
+      "referenceName" : "Plus Monthly",
+      "subscriptionGroupID" : "21000001",
+      "type" : "RecurringSubscription"
+    },
+    {
+      "displayPrice" : "59.99",
+      "familyShareable" : false,
+      "internalID" : "1002",
+      "localizations" : [
+        {
+          "description" : "Unlimited goals, relationships & more - save 37%",
+          "displayName" : "momentum Plus Yearly",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "io.momentum.goaltracker.plus.yearly",
+      "recurringSubscriptionPeriod" : "P1Y",
+      "referenceName" : "Plus Yearly",
+      "subscriptionGroupID" : "21000001",
+      "type" : "RecurringSubscription"
+    },
+    {
+      "displayPrice" : "149.99",
+      "familyShareable" : false,
+      "internalID" : "1003",
+      "localizations" : [
+        {
+          "description" : "Lifetime access to all premium features",
+          "displayName" : "momentum Plus Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "io.momentum.goaltracker.plus.lifetime",
+      "referenceName" : "Plus Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "subscriptionGroups" : [
+    {
+      "id" : "21000001",
+      "localizations" : [
+        {
+          "description" : "Access to all premium features",
+          "displayName" : "momentum Plus",
+          "locale" : "en_US"
+        }
+      ],
+      "name" : "momentum Plus",
+      "subscriptions" : [
+        "io.momentum.goaltracker.plus.monthly",
+        "io.momentum.goaltracker.plus.yearly"
+      ]
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "0",
+    "_developerTeamID" : "6PKNB6ZJ2C",
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Renewal"
+      }
+    ],
+    "_timeRate" : 0
+  }
+}
