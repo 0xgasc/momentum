@@ -126,6 +126,7 @@ struct GoalDetailView: View {
                 }
                 .padding(Spacing.md)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.cream.ignoresSafeArea())
             .navigationTitle(goal.title)
             .navigationBarTitleDisplayMode(.inline)

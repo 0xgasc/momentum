@@ -457,6 +457,7 @@ struct AddGoalSheet: View {
                     Spacer().frame(height: Spacing.xxl)
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.cream.ignoresSafeArea())
             .navigationTitle("New Goal")
             .navigationBarTitleDisplayMode(.inline)

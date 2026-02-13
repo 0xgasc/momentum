@@ -661,6 +661,7 @@ struct LogWinSheet: View {
                 }
                 .padding(Spacing.lg)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.white.ignoresSafeArea())
             .navigationTitle("Log a Win")
             .navigationBarTitleDisplayMode(.inline)

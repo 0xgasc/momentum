@@ -295,6 +295,7 @@ struct AddRelationshipSheet: View {
                 }
                 .padding(Spacing.lg)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.white.ignoresSafeArea())
             .navigationTitle("Add Person")
             .navigationBarTitleDisplayMode(.inline)
@@ -458,6 +459,7 @@ struct QuickLogInteractionSheet: View {
                 }
                 .padding(Spacing.lg)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.white.ignoresSafeArea())
             .navigationTitle("Log Interaction")
             .navigationBarTitleDisplayMode(.inline)
@@ -688,6 +690,7 @@ struct RelationshipDetailView: View {
                 }
                 .padding(Spacing.md)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.cream.ignoresSafeArea())
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -828,7 +831,7 @@ struct EditRelationshipSheet: View {
         NavigationStack {
             Form {
                 Section("Name") {
-                    TextField("Name", text: $relationship.name)
+                    TextField("Their name", text: $relationship.name)
                 }
 
                 Section("Category") {
@@ -849,7 +852,7 @@ struct EditRelationshipSheet: View {
                 }
 
                 Section("Notes") {
-                    TextField("Notes", text: $relationship.notes, axis: .vertical)
+                    TextField("How you met, shared interests...", text: $relationship.notes, axis: .vertical)
                         .lineLimit(3...5)
                 }
             }

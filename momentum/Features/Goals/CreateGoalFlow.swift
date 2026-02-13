@@ -280,6 +280,7 @@ struct DreamItStep: View {
             }
             .padding(Spacing.lg)
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 }
 
@@ -372,6 +373,7 @@ struct BelieveItStep: View {
             }
             .padding(Spacing.lg)
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 }
 
@@ -492,6 +494,7 @@ struct BreakItDownStep: View {
             }
             .padding(Spacing.lg)
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 
     private func addSuggestion(_ title: String) {

@@ -143,6 +143,7 @@ struct ShareToCommunitySheet: View {
                 }
                 .padding(Spacing.lg)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.cream.ignoresSafeArea())
             .navigationTitle(content.title)
             .navigationBarTitleDisplayMode(.inline)

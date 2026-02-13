@@ -506,7 +506,7 @@ struct WeatherVibeStep: View {
                     .font(.displaySmall)
                     .foregroundColor(Color.momentum.charcoal)
 
-                Text("Control your experience.\nNo location tracking required.")
+                Text("Control your experience.\nChoose what works for you.")
                     .font(.bodyMedium)
                     .foregroundColor(Color.momentum.gray)
                     .multilineTextAlignment(.center)

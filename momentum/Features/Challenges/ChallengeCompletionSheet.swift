@@ -115,6 +115,7 @@ struct ChallengeCompletionSheet: View {
                 }
                 .padding(Spacing.lg)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Color.momentum.cream.ignoresSafeArea())
             .navigationTitle("Complete Challenge")
             .navigationBarTitleDisplayMode(.inline)
