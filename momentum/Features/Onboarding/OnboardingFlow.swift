@@ -253,11 +253,12 @@ struct WelcomeStep: View {
                     .font(.system(size: 48, weight: .bold, design: .rounded))
                     .foregroundColor(Color.momentum.coral)
 
-                Text("Your journey to becoming who you're meant to be starts here.")
+                Text("Your journey to becoming\nwho you're meant to be starts here.")
                     .font(.bodyMedium)
                     .foregroundColor(Color.momentum.gray)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, Spacing.xl)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, Spacing.lg)
             }
 
             Spacer()
@@ -299,11 +300,12 @@ struct IdentityStep: View {
                     .font(.displaySmall)
                     .foregroundColor(Color.momentum.charcoal)
 
-                Text("This helps us personalize your experience. You can skip this if you prefer.")
+                Text("This helps us personalize your experience.\nYou can skip this if you prefer.")
                     .font(.bodyMedium)
                     .foregroundColor(Color.momentum.gray)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, Spacing.xl)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, Spacing.lg)
             }
 
             Spacer()
@@ -383,6 +385,7 @@ struct MotivationStep: View {
                                 Text(option.description)
                                     .font(.caption)
                                     .foregroundColor(Color.momentum.gray)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
 
                             Spacer()
@@ -428,10 +431,11 @@ struct FocusAreasStep: View {
                     .font(.displaySmall)
                     .foregroundColor(Color.momentum.charcoal)
 
-                Text("Select all that apply. You can always change this later.")
+                Text("Select all that apply.\nYou can always change this later.")
                     .font(.bodyMedium)
                     .foregroundColor(Color.momentum.gray)
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
 
             Spacer()
@@ -502,11 +506,12 @@ struct WeatherVibeStep: View {
                     .font(.displaySmall)
                     .foregroundColor(Color.momentum.charcoal)
 
-                Text("Control your experience. No location tracking required.")
+                Text("Control your experience.\nNo location tracking required.")
                     .font(.bodyMedium)
                     .foregroundColor(Color.momentum.gray)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, Spacing.xl)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, Spacing.lg)
             }
 
             Spacer()
@@ -534,6 +539,7 @@ struct WeatherVibeStep: View {
                                 Text(mode.description)
                                     .font(.caption)
                                     .foregroundColor(Color.momentum.gray)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
 
                             Spacer()
