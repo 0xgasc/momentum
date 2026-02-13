@@ -7,6 +7,8 @@ struct GoalVisionBoard: View {
     @Environment(\.modelContext) private var modelContext
     @Query(filter: #Predicate<Goal> { !$0.isArchived }) private var goals: [Goal]
 
+    @EnvironmentObject private var purchaseService: PurchaseService
+
     @State private var selectedGoal: Goal?
     @State private var showAddGoal = false
     @State private var showShareSheet = false
@@ -23,8 +25,12 @@ struct GoalVisionBoard: View {
                             selectedGoal = featured
                         },
                         onShare: {
-                            goalToShare = featured
-                            showShareSheet = true
+                            if purchaseService.isPlus {
+                                goalToShare = featured
+                                showShareSheet = true
+                            } else {
+                                purchaseService.showPaywall = true
+                            }
                         }
                     )
                 } else {

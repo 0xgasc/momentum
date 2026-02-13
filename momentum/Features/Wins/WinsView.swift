@@ -6,6 +6,8 @@ struct WinsView: View {
     @Query(sort: \Win.createdAt, order: .reverse) private var allWins: [Win]
     @Query(filter: #Predicate<Goal> { !$0.isArchived }) private var goals: [Goal]
 
+    @EnvironmentObject private var purchaseService: PurchaseService
+
     @State private var selectedFilter: WinFilter = .all
     @State private var selectedGoalFilter: Goal?
     @State private var showLogWin = false
@@ -80,9 +82,13 @@ struct WinsView: View {
                                         WinCard(win: win)
                                             .contextMenu {
                                                 Button {
-                                                    winToShare = win
+                                                    if purchaseService.isPlus {
+                                                        winToShare = win
+                                                    } else {
+                                                        purchaseService.showPaywall = true
+                                                    }
                                                 } label: {
-                                                    Label("Share", systemImage: "square.and.arrow.up")
+                                                    Label(purchaseService.isPlus ? "Share" : "Share (Plus)", systemImage: "square.and.arrow.up")
                                                 }
 
                                                 Button(role: .destructive) {

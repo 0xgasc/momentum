@@ -195,9 +195,13 @@ struct DashboardView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack(spacing: Spacing.md) {
-                        // Share button
+                        // Share button (Plus only)
                         Button {
-                            showShareSheet = true
+                            if purchaseService.isPlus {
+                                showShareSheet = true
+                            } else {
+                                purchaseService.showPaywall = true
+                            }
                         } label: {
                             Image(systemName: "square.and.arrow.up")
                                 .foregroundColor(Color.momentum.coral)
@@ -230,7 +234,11 @@ struct DashboardView: View {
                         winSize: celebrationSize,
                         isShowing: $showCelebration,
                         onShare: {
-                            showShareAfterCelebration = true
+                            if purchaseService.isPlus {
+                                showShareAfterCelebration = true
+                            } else {
+                                purchaseService.showPaywall = true
+                            }
                         }
                     )
                 }
